@@ -13,7 +13,7 @@ if (isset($_POST['car_name'])) {
 
 }
 
-header("Location: index.html");
+//header("Location: index.html");
 
 
 ?>

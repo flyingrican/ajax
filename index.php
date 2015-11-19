@@ -44,7 +44,7 @@
 </script>
 
 
-	<div id="container" class="col-xs-6 col-xs-offset-3 text-center">
+	<div id="container" class="col-xs-6 col-xs-offset-3">
 		
 		<h2>Search Our Database</h2>
 

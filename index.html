@@ -15,6 +15,16 @@
 	
 	$(document).ready(function(){
 
+		//Updates cars list every three seconds
+		setInterval(function(){
+
+			updateCars();
+
+		}, 3000);
+
+		//This function shows the cars from the database
+		function updateCars(){
+
 		$.ajax({
 
 			url: 'display_cars.php',
@@ -23,13 +33,15 @@
 
 				if (!show_cars.error) {
 
-					$("#show-cars").html("Hello It Works");
+					$("#show-cars").html(show_cars);
 
 				};
 
 			}
-			
+
 		}); //End of $.ajax Function
+
+	} //End of updateCars function
 
 		$('#search').keyup(function(){
 

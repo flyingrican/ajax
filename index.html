@@ -14,13 +14,14 @@
 <script>
 	
 	$(document).ready(function(){
+        
 
 		//Updates cars list every three seconds
 		setInterval(function(){
 
 			updateCars();
 
-		}, 3000);
+		}, 1000);
 
 		//This function shows the cars from the database
 		function updateCars(){
@@ -78,6 +79,8 @@
 			$.post(url, postData, function(php_table_data){
 
 				$("#car-result").html(php_table_data);
+                
+                $("#add-car-form")[0].reset();
 
 			}); //End of $.post function
 
@@ -106,7 +109,8 @@
 			
 			<form id="add-car-form" class="col-xs-6" method="post" action="add_cars.php">
 				<div class="form-group">
-				<input type="text" class="form-control" name="car_name">
+				<label for="car-name">Add a Car</label>
+				<input type="text" class="form-control" name="car_name" required>
 				</div>
 				<div class="form-group">
 				<input type="submit" class="btn btn-primary" value="Add Car">
@@ -136,6 +140,15 @@
 						</tbody>
 
 				</table>
+
+			</div>
+			
+			<div class="col-xs-6">
+
+				
+				<div id="action-container">
+				    
+				</div>
 
 			</div>
 

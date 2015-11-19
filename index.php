@@ -34,24 +34,51 @@
 
 				}
 
-			});
+			}); //End of $.ajax Function
 
 		});
 
-	});
+		//This code adds cars to the database table cars
+		$("#add-car-form").submit(function(evt){
+
+			evt.preventDefault();
+
+			var postData = $(this).serialize();
+
+			var url = $(this).attr('action');
+
+
+
+		}); //End of #add-car-form function
+
+	}); //End of Document Ready Function
 
 
 </script>
 
 
 	<div id="container" class="col-xs-6 col-xs-offset-3">
-		
-		<h2>Search Our Database</h2>
+		<div class="row">
+			<h2>Search Our Database</h2>
 
-		<input class="form-control" type="text" name="search" id="search" placeholder="Search Our Inventory">
-		<br>
-		<br>
-		<h2 class="bg-success" id="result"></h2>
+			<input class="form-control" type="text" name="search" id="search" placeholder="Search Our Inventory">
+			<br>
+			<br>
+			<h2 class="bg-success" id="result"></h2>
+		</div>
+		
+		<div class="row">
+			
+			<form id="add-car-form" class="col-xs-6" method="post" action="add_cars.php">
+				<div class="form-group">
+				<input type="text" class="form-control" name="car_name">
+				</div>
+				<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Add Car">
+				</div>
+			</form>
+
+		</div>
 
 	</div>
 

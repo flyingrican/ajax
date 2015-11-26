@@ -10,6 +10,7 @@ confirm($query_car_info);
 while ($row = mysqli_fetch_array($query_car_info)) {
 	
 	echo "<tr>";
+    
 	echo "<td>{$row['id']}</td>";
 	echo "<td><a rel='".$row['id']."' class='title-link' href='javascript:void(0)'>{$row['title']}</a></td>}";
 	echo "</tr>";
